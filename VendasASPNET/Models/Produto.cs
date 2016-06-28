@@ -21,8 +21,8 @@ namespace VendasASPNET.Models
 
         public int Quantidade { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
 
-        public virtual int categoriaID { get; set; }
+        public  int categoriaID { get; set; }
     }
 }
