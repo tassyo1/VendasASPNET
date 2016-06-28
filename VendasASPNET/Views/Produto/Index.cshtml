@@ -7,11 +7,11 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var p in Model)
+        @foreach (VendasASPNET.Models.Produto p in Model)
         {
             <tr>
                 <td>@p.ID</td>
-                <td>@p.Nome</td>
+                <td>@Html.ActionLink(p.Nome,"Visualiza", new  { id = p.ID })</td>
                 <td>@p.Preco</td>
             </tr>
         }

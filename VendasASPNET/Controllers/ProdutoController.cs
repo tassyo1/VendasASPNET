@@ -33,7 +33,7 @@ namespace VendasASPNET.Controllers
             return View(categorias);
         }
 
-        
+
         public ActionResult Adiciona(Produto produto)
         {
             int idInformatica = 1;
@@ -54,9 +54,16 @@ namespace VendasASPNET.Controllers
             else
             {
                 ViewBag.Produto = produto;
-                IList<Categoria>categorias = contexto.Categorias.OrderBy(c => c.Nome).ToList();
+                IList<Categoria> categorias = contexto.Categorias.OrderBy(c => c.Nome).ToList();
                 return View("Form", categorias);
             }
+        }
+
+        public ActionResult Visualiza(int id)
+        {
+            Contexto contexto = new Contexto();
+            Produto produto = contexto.Produtos.Find(id);
+            return View(produto);
         }
     }
 }
