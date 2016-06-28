@@ -16,7 +16,29 @@ namespace VendasASPNET.Controllers
         {
             Contexto contexto = new Contexto();
             IList<Produto> produtos = contexto.Produtos.OrderBy(p => p.Nome).ToList();
+            contexto.Dispose();
             return View(produtos);
+        }
+
+        public ActionResult Form()
+        {
+            Contexto contexto = new Contexto();
+            IList<Categoria> categorias = contexto.Categorias.OrderBy(c => c.Nome).ToList();
+            contexto.Dispose();
+            return View(categorias);
+        }
+
+        public ActionResult Adiciona(Produto p)
+        {
+            Contexto contexto = new Contexto();
+            
+
+            contexto.Produtos.Add(p);
+            contexto.SaveChanges();
+            contexto.Dispose();
+
+            return RedirectToAction("Index");
+
         }
     }
 }

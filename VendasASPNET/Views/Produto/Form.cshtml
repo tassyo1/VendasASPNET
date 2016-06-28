@@ -1,0 +1,16 @@
+﻿<form action="/Produto/Adiciona">
+    <label>Nome: <input name="produto.Nome" /></label>
+    <label>Preço: <input name="produto.Preco" /></label>
+    <label>Quantidade: <input name="Produto.Quantidade" /></label>
+    <label>Descrição: <input name="Produto.Descricao" /></label>
+    <label>
+        Categoria: 
+            <select name="Produto.categoriaID">
+                @foreach (var categoria in Model)
+                {
+                    <option value="@categoria.ID" >@categoria.Nome</option>
+                }
+            </select>
+    </label>
+    <input type="submit" />
+</form>
