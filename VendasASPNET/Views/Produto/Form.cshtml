@@ -1,16 +1,17 @@
 ﻿<form action="/Produto/Adiciona">
-    <label>Nome: <input name="produto.Nome" /></label>
-    <label>Preço: <input name="produto.Preco" /></label>
-    <label>Quantidade: <input name="Produto.Quantidade" /></label>
-    <label>Descrição: <input name="Produto.Descricao" /></label>
+    <label>Nome: <input name="produto.Nome" /></label> <br />
+    @Html.ValidationMessage("produto.Nome")
+    <label>Preço: <input name="produto.Preco" /></label><br />
+    <label>Quantidade: <input name="produto.Quantidade" /></label><br />
+    <label>Descrição: <input name="produto.Descricao" /></label><br />
     <label>
         Categoria: 
-            <select name="Produto.categoriaID">
+            <select name="produto.Categoria.ID">
                 @foreach (var categoria in Model)
                 {
                     <option value="@categoria.ID" >@categoria.Nome</option>
                 }
             </select>
-    </label>
+    </label><br />
     <input type="submit" />
 </form>

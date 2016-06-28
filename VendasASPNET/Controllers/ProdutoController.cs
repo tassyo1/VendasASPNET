@@ -28,17 +28,23 @@ namespace VendasASPNET.Controllers
             return View(categorias);
         }
 
-        public ActionResult Adiciona(Produto p)
+        
+        public ActionResult Adiciona(Produto produto)
         {
             Contexto contexto = new Contexto();
-            
+            if (ModelState.IsValid)
+            {
+                contexto.Produtos.Add(produto);
+                contexto.SaveChanges();
+                contexto.Dispose();
 
-            contexto.Produtos.Add(p);
-            contexto.SaveChanges();
-            contexto.Dispose();
-
-            return RedirectToAction("Index");
-
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                IList<Categoria>categorias = contexto.Categorias.OrderBy(c => c.Nome).ToList();
+                return View("Form", categorias);
+            }
         }
     }
 }

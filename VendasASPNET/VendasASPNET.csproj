@@ -183,6 +183,10 @@
     <Compile Include="Migrations\201606280121264_CriaProduto.Designer.cs">
       <DependentUpon>201606280121264_CriaProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606280544216_ValidacaoNomeProduto.cs" />
+    <Compile Include="Migrations\201606280544216_ValidacaoNomeProduto.Designer.cs">
+      <DependentUpon>201606280544216_ValidacaoNomeProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Categoria.cs" />
@@ -270,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606280121264_CriaProduto.resx">
       <DependentUpon>201606280121264_CriaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606280544216_ValidacaoNomeProduto.resx">
+      <DependentUpon>201606280544216_ValidacaoNomeProduto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
