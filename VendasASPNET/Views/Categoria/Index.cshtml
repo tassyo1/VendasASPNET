@@ -1,0 +1,25 @@
+﻿<table>
+    <thead>
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                Nome
+            </td>
+            <td>
+                Descrição
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VendasASPNET.Models.Categoria c in Model)
+        {
+            <tr>
+                <td>@c.ID</td>
+                <td>@Html.ActionLink(c.Nome,"Visualiza", new { id = c.ID })</td>
+                <td>@c.Descricao</td>
+            </tr>
+        }
+    </tbody>
+</table>

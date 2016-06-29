@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\201606280544216_ValidacaoNomeProduto.cs" />
     <Compile Include="Migrations\201606280544216_ValidacaoNomeProduto.Designer.cs">
       <DependentUpon>201606280544216_ValidacaoNomeProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606292239503_CriaValidacaoCategoria.cs" />
+    <Compile Include="Migrations\201606292239503_CriaValidacaoCategoria.Designer.cs">
+      <DependentUpon>201606292239503_CriaValidacaoCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -254,6 +259,9 @@
     <Content Include="Views\Produto\Index.cshtml" />
     <Content Include="Views\Produto\Form.cshtml" />
     <Content Include="Views\Produto\Visualiza.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Categoria\Form.cshtml" />
+    <Content Include="Views\Categoria\Visualiza.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606280544216_ValidacaoNomeProduto.resx">
       <DependentUpon>201606280544216_ValidacaoNomeProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606292239503_CriaValidacaoCategoria.resx">
+      <DependentUpon>201606292239503_CriaValidacaoCategoria.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

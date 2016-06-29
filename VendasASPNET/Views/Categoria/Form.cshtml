@@ -1,0 +1,7 @@
+﻿<form action="/Categoria/Adiciona">
+    <label>Nome: <input type="text" name="categoria.Nome" /></label> <br />
+    @Html.ValidationMessage("categoria.Nome") 
+    <label>Descrição:<input type="text" name="categoria.Descricao" /> </label>
+    @Html.ValidationMessage("categoria.Descricao")
+    <input type="submit" value="Cadastrar" />
+</form>
