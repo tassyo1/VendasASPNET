@@ -11,7 +11,8 @@
         {
             <tr>
                 <td>@p.ID</td>
-                <td>@Html.ActionLink(p.Nome,"Visualiza", new  { id = p.ID })</td>
+                <td>
+                      @Html.RouteLink(p.Nome, "VisualizaProdutos", new  { id = p.ID })</td>
                 <td>@p.Preco</td>
             </tr>
         }

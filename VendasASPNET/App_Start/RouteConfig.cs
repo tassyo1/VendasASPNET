@@ -13,6 +13,14 @@ namespace VendasASPNET
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("ListaProdutos",
+                            "produtos",
+                            new { controller = "Produto", action = "Index" });
+
+            routes.MapRoute("VisualizaProdutos", 
+                            "produtos/{id}",
+                            new { controller = "Produto", action = "Visualiza" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
