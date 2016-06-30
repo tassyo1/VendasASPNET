@@ -1,8 +1,11 @@
 ﻿@model VendasASPNET.Models.Categoria
 
+@{ 
+    Layout = "~/Views/_LayoutEstoque.cshtml";
+}
 ID: @Model.ID <br />
 Nome: @Model.Nome <br />
 Descrição: @Model.Descricao
 <br />
 <br />
-@Html.ActionLink("Voltar para index","Index","Categoria")
+@Html.RouteLink("Voltar para lista de categorias", "ListaCategorias")
