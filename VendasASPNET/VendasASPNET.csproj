@@ -262,6 +262,7 @@
     <Content Include="Views\Categoria\Index.cshtml" />
     <Content Include="Views\Categoria\Form.cshtml" />
     <Content Include="Views\Categoria\Visualiza.cshtml" />
+    <Content Include="Views\_LayoutEstoque.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
