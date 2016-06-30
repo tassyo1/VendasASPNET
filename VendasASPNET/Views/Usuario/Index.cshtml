@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout= "~/Views/_LayoutEstoque.cshtml";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>UserName </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VendasASPNET.Models.Usuario u in Model)
+        {
+            <tr>
+                <td>@u.ID</td>
+                <td>@u.Nome</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

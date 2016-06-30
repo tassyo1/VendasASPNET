@@ -1,0 +1,11 @@
+﻿@{ 
+    Layout= "~/Views/_LayoutEstoque.cshtml";
+}
+
+<form action="/Usuario/Adiciona">
+    <label>Username:<input type ="text" name="usuario.Nome" /></label> <br />
+    @Html.ValidationMessage("usuario.Nome")
+    <label>Password:<input type="password" name="usuario.Senha" /></label><br />
+    @Html.ValidationMessage("usuario.Senha")
+     <input type="submit" value="Salvar" />
+</form>
