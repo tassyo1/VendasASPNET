@@ -17,7 +17,7 @@
         {
             <tr>
                 <td>@c.ID</td>
-                <td>@Html.ActionLink(c.Nome,"Visualiza", new { id = c.ID })</td>
+                <td>@Html.RouteLink(c.Nome, "VisualizaCategorias", new { id = c.ID })</td>
                 <td>@c.Descricao</td>
             </tr>
         }
