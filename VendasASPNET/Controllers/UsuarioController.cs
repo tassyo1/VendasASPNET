@@ -23,6 +23,7 @@ namespace VendasASPNET.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         public ActionResult Adiciona(Usuario usuario)
         {
             Contexto contexto = new Contexto();

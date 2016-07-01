@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VendasASPNET.DAO;
+using VendasASPNET.Filtros;
 using VendasASPNET.Models;
 namespace VendasASPNET.Controllers
 {
+    [AutenticacaoFilter]
     public class CategoriaController : Controller
     {
         // GET: Categoria
@@ -23,6 +25,7 @@ namespace VendasASPNET.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         public ActionResult Adiciona(Categoria categoria)
         {
             Contexto contexto = new Contexto();

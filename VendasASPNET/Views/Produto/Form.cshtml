@@ -1,4 +1,5 @@
 ﻿<form action="/Produto/Adiciona">
+    @Html.AntiForgeryToken()
     @Html.ValidationMessage("produto.InformaticaComPrecoInvalido")
     <label>Nome: <input name="produto.Nome" value="@ViewBag.Produto.Nome"/></label> <br />
     @Html.ValidationMessage("produto.Nome")

@@ -36,7 +36,7 @@ namespace VendasASPNET.Controllers
             return View(categorias);
         }
 
-        
+        [ValidateAntiForgeryToken]
         public ActionResult Adiciona(Produto produto)
         {
             int idInformatica = 1;

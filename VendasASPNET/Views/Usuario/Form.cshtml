@@ -3,6 +3,7 @@
 }
 
 <form action="/Usuario/Adiciona">
+    @Html.AntiForgeryToken()
     <label>Username:<input type ="text" name="usuario.Nome" /></label> <br />
     @Html.ValidationMessage("usuario.Nome")
     <label>Password:<input type="password" name="usuario.Senha" /></label><br />
