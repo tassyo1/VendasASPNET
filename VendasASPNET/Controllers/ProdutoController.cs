@@ -5,10 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using VendasASPNET.DAO;
 using VendasASPNET.Models;
+using VendasASPNET.Filtros;
 
 
 namespace VendasASPNET.Controllers
 {
+    [AutenticacaoFilter]
     public class ProdutoController : Controller
     {
         // GET: Produto
@@ -20,6 +22,7 @@ namespace VendasASPNET.Controllers
             return View(produtos);
         }
 
+        
         public ActionResult Form()
         {
             Contexto contexto = new Contexto();
@@ -33,7 +36,7 @@ namespace VendasASPNET.Controllers
             return View(categorias);
         }
 
-
+        
         public ActionResult Adiciona(Produto produto)
         {
             int idInformatica = 1;
