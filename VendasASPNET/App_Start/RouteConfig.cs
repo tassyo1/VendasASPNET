@@ -17,6 +17,10 @@ namespace VendasASPNET
                             "produtos",
                             new { controller = "Produto", action = "Index" });
 
+            routes.MapRoute("CriaProdutos",
+                             "produtos/novo",
+                             new { controller = "Produto", action = "Form" });
+
             routes.MapRoute("VisualizaProdutos", 
                             "produtos/{id}",
                             new { controller = "Produto", action = "Visualiza" });

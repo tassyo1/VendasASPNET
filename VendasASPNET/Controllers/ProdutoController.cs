@@ -80,5 +80,14 @@ namespace VendasASPNET.Controllers
             contexto.SaveChanges();
             return Json(produto);
         }
+
+        public ActionResult AumentaQuantidade(int produtoID)
+        {
+            Contexto contexto = new Contexto();
+            Produto produto = contexto.Produtos.Find(produtoID);
+            produto.Quantidade++;
+            contexto.SaveChanges();
+            return Json(produto);
+        }
     }
 }
