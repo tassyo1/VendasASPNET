@@ -68,5 +68,17 @@ namespace VendasASPNET.Controllers
             Produto produto = contexto.Produtos.Find(id);
             return View(produto);
         }
+
+        public ActionResult DecrementaQuantidade(int produtoID)
+        {
+            Contexto contexto = new Contexto();
+            Produto produto = contexto.Produtos.Find(produtoID);
+            if (produto.Quantidade > 0)
+            {
+                produto.Quantidade--;
+            }
+            contexto.SaveChanges();
+            return Json(produto);
+        }
     }
 }
